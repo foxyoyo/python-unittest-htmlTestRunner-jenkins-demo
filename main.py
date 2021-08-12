@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     report = "./result.html"
     with(open(report, 'wb')) as fp:
-        runner = HtmlTestRunner.HTMLTestRunner(stream=fp,title='Unit Test report',description='unit test')
+        runner = HtmlTestRunner.HTMLTestRunner(stream=fp)
         runner.run(suit)
 
 
