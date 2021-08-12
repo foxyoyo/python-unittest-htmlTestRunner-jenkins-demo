@@ -5,8 +5,9 @@
 # Here you can create the test suite, call the unit test
 # generate the test report, and also send the result to email
 import unittest
-from TestRunner import HTMLTestRunner
-from TestRunner import SMTP
+# from TestRunner import HTMLTestRunner
+# from TestRunner import SMTP
+import HTMLTestRunner
 from test import TestDemo, TestDemo2
 
 
@@ -21,11 +22,12 @@ if __name__ == '__main__':
 
     report = "./result.html"
     with(open(report, 'wb')) as fp:
-        runner = HTMLTestRunner(
-            stream=fp,
-            title='Unit Test report',
-            description='unit test'
-        )
+        # runner = HTMLTestRunner(
+        #     stream=fp,
+        #     title='Unit Test report',
+        #     description='unit test'
+        # )
+        runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title='Unit Test Report',description='unit test')
         runner.run(suit)
 
     # use gmail to provide email sending service
