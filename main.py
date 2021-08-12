@@ -20,15 +20,15 @@ if __name__ == '__main__':
     suit.addTest(TestDemo2("test_insert_sort"))
     suit.addTest(TestDemo2("test_insert_sort_wrong"))
 
-    report = "./result.html"
-    with(open(report, 'wb')) as fp:
-        runner = HtmlTestRunner.HTMLTestRunner(stream=fp)
-        runner.run(suit)
+    # report = "./result.html"
+    # with(open(report, 'wb')) as fp:
+    #     runner = HtmlTestRunner.HTMLTestRunner(stream=fp)
+    #     runner.run(suit)
 
 
-    # html_report_dir = "./html_report"
-    # runner = HtmlTestRunner.HTMLTestRunner(output=html_report_dir)
-    # runner.run(suit)
+    html_report_dir = "./html_report"
+    runner = HtmlTestRunner.HTMLTestRunner(output=html_report_dir)
+    runner.run(suit)
 
     # use gmail to provide email sending service
     # smtp = SMTP(user="sender@gmail.com", password="", host="smtp.gmail.com")
