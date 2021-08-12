@@ -21,7 +21,7 @@ if __name__ == '__main__':
     suit.addTest(TestDemo2("test_insert_sort_wrong"))
 
     #report = "./result.html"
-    with(open(report, 'wb')) as fp:
+    #with(open(report, 'wb')) as fp:
         # runner = HTMLTestRunner(
         #     stream=fp,
         #     title='Unit Test report',
