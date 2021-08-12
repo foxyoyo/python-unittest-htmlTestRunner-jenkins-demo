@@ -7,7 +7,7 @@
 import unittest
 # from TestRunner import HTMLTestRunner
 # from TestRunner import SMTP
-import HTMLTestRunner
+import HtmlTestRunner
 from test import TestDemo, TestDemo2
 
 
@@ -20,15 +20,20 @@ if __name__ == '__main__':
     suit.addTest(TestDemo2("test_insert_sort"))
     suit.addTest(TestDemo2("test_insert_sort_wrong"))
 
-    report = "./result.html"
+    #report = "./result.html"
     with(open(report, 'wb')) as fp:
         # runner = HTMLTestRunner(
         #     stream=fp,
         #     title='Unit Test report',
         #     description='unit test'
         # )
-        runner=HTMLTestRunner(stream=fp,title='Unit Test Report',description='unit test')
-        runner.run(suit)
+
+        #runner.run(suit)
+
+
+    html_report_dir = './html_report'
+    runner = HtmlTestRunner.HTMLTestRunner(output=html_report_dir)
+    runner.run(suit)
 
     # use gmail to provide email sending service
     # smtp = SMTP(user="sender@gmail.com", password="", host="smtp.gmail.com")
