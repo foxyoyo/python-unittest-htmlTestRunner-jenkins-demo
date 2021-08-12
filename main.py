@@ -7,7 +7,7 @@
 import unittest
 # from TestRunner import HTMLTestRunner
 # from TestRunner import SMTP
-from HTMLTestRunner import HTMLTestRunner
+from HTMLTestRunner-Python3 import HTMLTestRunner
 from test import TestDemo, TestDemo2
 
 
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     suit = unittest.TestSuite()
     suit.addTest(TestDemo("test_success"))
     suit.addTest(TestDemo("test_skip"))
-    suit.addTest(TestDemo("test_fail"))
+    suit.addTest(TestDemo("test_fail")
     suit.addTest(TestDemo("test_error"))
     suit.addTest(TestDemo2("test_insert_sort"))
     suit.addTest(TestDemo2("test_insert_sort_wrong"))
