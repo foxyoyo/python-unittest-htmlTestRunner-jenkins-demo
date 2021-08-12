@@ -31,7 +31,7 @@ if __name__ == '__main__':
         #runner.run(suit)
 
 
-    html_report_dir = './html_report'
+    html_report_dir = "./html_report"
     runner = HtmlTestRunner.HTMLTestRunner(output=html_report_dir)
     runner.run(suit)
 
