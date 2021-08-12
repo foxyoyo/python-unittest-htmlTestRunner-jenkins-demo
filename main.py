@@ -7,7 +7,7 @@
 import unittest
 # from TestRunner import HTMLTestRunner
 # from TestRunner import SMTP
-from HTMLTestRunner-Python3 import HTMLTestRunner
+from HTMLTestRunner import HTMLTestRunner
 from test import TestDemo, TestDemo2
 
 
