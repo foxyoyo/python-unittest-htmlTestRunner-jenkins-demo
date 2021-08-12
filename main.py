@@ -27,7 +27,7 @@ if __name__ == '__main__':
         #     title='Unit Test report',
         #     description='unit test'
         # )
-        runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title='Unit Test Report',description='unit test')
+        runner=HTMLTestRunner(stream=fp,title='Unit Test Report',description='unit test')
         runner.run(suit)
 
     # use gmail to provide email sending service
